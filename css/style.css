@@ -11,12 +11,13 @@
     box-sizing: border-box;
   }
 
-  .container {
+  .container-pending {
       margin-left: auto;
       margin-right: auto;
-      width: 75%;
+      width: 33%;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      padding: 3px;
   }
 
   body {
