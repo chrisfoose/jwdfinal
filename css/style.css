@@ -12,6 +12,8 @@
   }
 
   .container {
+      margin-left: auto;
+      margin-right: auto;
       width: 75%;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -23,9 +25,6 @@
 
   .card-body {
     box-sizing: border-box;
-    border: 22px solid blueviolet;
-  }
-
-  div {
-    border: 10p solid blueviolet;
+    border: 1px solid black;
+    padding: 5px;
   }
