@@ -28,7 +28,30 @@ body {
 .card-body {
   box-sizing: border-box;
   border: 1px solid black;
-  padding: 5px;
+  padding-right: 100px;
+  grid-template-rows: 33% 33% 33%;
+}
+
+ /*Alternate Dashboard Section*/
+
+.grid-container {
+  margin: 10px;
+  height: 300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.grid-item {
+  color: black;
+  font-size: 25px;
+  text-align: left;
+  width: 150px;
+  line-height: 40px;
+  margin: 10px;
+  padding-right: 100px;
+  border: 1px solid black;
+  box-sizing: border-box;
 }
 
  /*Add Task Section*/
