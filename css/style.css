@@ -253,7 +253,7 @@ text-decoration:none;
   .status {
 
     text-align: left;
-    color:rgb(126, 121, 121);
+    color:rgb(255, 255, 255);
     margin-left: 400px;
     margin-top: 50px;
     padding: 10px;
@@ -262,7 +262,7 @@ text-decoration:none;
 .due-date {
 
   text-align: left;
-  color:rgb(126, 121, 121);
+  color:rgb(255, 255, 255);
   margin-left: 400px;
   margin-top: 50px;
   padding: 10px;
@@ -272,7 +272,7 @@ text-decoration:none;
 .description {
 
   text-align: left;
-  color:rgb(126, 121, 121);
+  color:rgb(255, 255, 255);
   margin-left: 400px;
   margin-top: 50px;
   margin-bottom: 20px;
@@ -282,7 +282,7 @@ text-decoration:none;
 .sub-tasks {
 
   text-align: left;
-  color:rgb(126, 121, 121);
+  color:rgb(255, 255, 255);
   margin-left: 400px;
   margin-top: 50px;
   padding: 10px;
@@ -291,7 +291,7 @@ text-decoration:none;
 .assigned-to {
 
   text-align: left;
-  color:rgb(126, 121, 121);
+  color:rgb(255, 255, 255);
   margin-left: 400px;
   margin-top: 50px;
   padding: 10px;
