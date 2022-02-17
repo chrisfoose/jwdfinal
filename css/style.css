@@ -22,7 +22,10 @@
 }
 
 body {
-    background-color: goldenrod;
+    background-image: url('https://images.unsplash.com/photo-1614849286447-fb815456e5a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .card-body {
@@ -46,12 +49,16 @@ body {
 .grid-item {
   color: black;
   font-size: 25px;
+  border-radius: 26px;
   text-align: left;
   width: 200px;
+  height: 200px;
   line-height: 40px;
   margin: 20px;
   padding-right: 100px;
-  border: 1px solid black;
+  padding-top: 10px;
+  border: 0.6px solid black;
+  background-color: #f5ececab;
 }
 
 .task-title {
@@ -84,8 +91,19 @@ body {
   line-height: 40px;
   margin: 20px;
   padding-right: 10px;
-  background-color:blanchedalmond;
+  border-radius: 26px;
+  background-color:rgba(255, 235, 205, 0.336);
+  
 
+}
+
+.dashboard-title {
+
+  text-align: left;
+  color:black;
+  margin-left: 400px;
+  margin-top: 50px;
+  padding: 10px 
 }
 
  /*Welcome Page Section*/
