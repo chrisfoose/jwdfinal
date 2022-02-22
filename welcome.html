@@ -11,32 +11,33 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" type="text/css">
   </head>
-  <body>
+  <body>       
+    <!-- Navbar-->
+    <nav class="navbar navbar-expand-lg bg-transparent navbar-transparent">
+      <a href="welcome.html" class="navbar-brand" style="color:white" !important>ToDoozy</a>
+      <!-- Made it possible to click on the navbar icon but unable to visibility see the icon -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ml-auto" style="text-align:right" !important>
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link" style="color:white" !important>Dashboard</a>
+          </li>
+          <li class="nav-item">
+           <a href="addtask.html" class="nav-link" style="color:white" !important>Add Task</a>
+         </li>
+        </ul>
+       </div>
+     </nav>
     <main>
-
-       <!-- Navbar-->
-   <nav class="navbar navbar-expand-lg bg-transparent navbar-transparent">
-    <div class="container">
-    <a href="welcome.html" class="navbar-brand" style="color:white" !important>ToDoozy</a>
- 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navmenu">
-      <ul class="navbar-nav ml-auto" style="text-align:right" !important>
-        <li class="nav-item">
-          <a href="dashboard.html" class="nav-link" style="color:white" !important>Dashboard</a>
-        </li>
-        <li class="nav-item">
-         <a href="addtask.html" class="nav-link" style="color:white" !important>Add Task</a>
-       </li>
-      </ul>
-      </div>
-     </div>
-   </nav>
- 
-       <!-- NEED HELP MAKING THIS RESPONSIVE -->
-
+      <!-- NEED HELP MAKING THIS RESPONSIVE -->
+      <div class="container">
+            <h1 class="welcome-title col-sm">Welcome to Your To-Do List!</h1>
+            <div class="wbutton">
+              <a href="dashboard.html"><button class="welcome-button">Go To Tasks</button>
+            </div>
+        </div>
 
         <style>
             body {
@@ -46,10 +47,7 @@
               background-size: cover;
             }
             </style>
-
-        <h1 class="welcome-title">Welcome to Your To-Do List!</h1>
-        <a href="dashboard.html"><button class="welcome-button">Go To Tasks</button>
-
+      
         </main>
 
 <!--Moved the JavaScript Bootstrap to the bottom-it belongs there-->

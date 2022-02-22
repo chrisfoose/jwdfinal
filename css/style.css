@@ -10,6 +10,7 @@
   justify-content: center;
   padding: 10px;
   box-sizing: border-box;
+  border-radius: 26px;
 }
 
 .container-pending {
@@ -31,7 +32,6 @@ body {
 
 .card-body {
   box-sizing: border-box;
-  border: 1px solid black;
   padding-right: 100px;
   grid-template-rows: 33% 33% 33%;
 }
@@ -99,17 +99,12 @@ body {
 }
 
 .dashboard-title {
-
-  text-align: left;
   color:white;
-  margin-left: 400px;
-  margin-top: 50px;
-  padding: 10px;
 }
 
 
 .addtask-button {
-  position:absolute; top: 55px; right:425px; 
+   top: 55px; right:425px; 
   background:linear-gradient(to bottom, #ffffff 5%, #ebe1e1 100%);
   background-color:#ededed;
   border-radius:26px;
@@ -122,48 +117,51 @@ body {
 }
 
 .addtask-button:hover {
-  background:linear-gradient(to bottom, #ebe1e1 5%, #ffffff 100%); background-color:#dfdfdf;
+  background:linear-gradient(to bottom, #ebe1e1 5%, #ffffff 100%); 
+  background-color:#dfdfdf;
   border: 0px;
 
  }
 
   .addtask-button:active {
-    position:relative;
     top:1px; 
     border: 0px;
 
   }
 
  /*Welcome Page Section*/
-
+ /* May need to be bigger in text size */
  .welcome-title {
-text-align: center;
-color: white;
-padding-top: 300px;
-padding-left: 300px;
-padding-right: 300px;
-padding-bottom: 50px;
- }
-
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:white;
+  margin-top:10px;
+  font-family:Arial;
+}
+.wbutton {
+  text-align: right;
+  
+}
+/* Stuck right there */
  .welcome-button {
-align-items: center;
-text-align: center;
-margin: 0px 10px 300px 700px;
-box-shadow: 0px 3px 27px 5px #dbdbdb;
-box-shadow: 0px 0px 0px 0px #ffffff;
-background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
-background-color:#ededed;
-border-radius:26px;
-display:inline-block;
-cursor:pointer;
-border: 0px;
-color:#777777;
-font-family:Arial;
-font-size:19px;
-padding:13px 30px;
-text-decoration:none;
-
- }
+  box-shadow: 0px 3px 27px 5px #dbdbdb;
+  box-shadow: 0px 0px 0px 0px #ffffff;
+  background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+  background-color:#ededed;
+  border-radius:26px;
+  cursor:pointer;
+  border: 0px;
+  color:#777777;
+  font-family:Arial;
+  font-size:19px;
+  padding:13px 30px;
+  text-decoration:none;
+  margin-top: 380px;
+}
 
  .welcome-button:hover {
   background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%); background-color:#dfdfdf;
@@ -182,7 +180,6 @@ text-decoration:none;
   padding: 10px;
   margin-left: 50px;
 }
-
 
 
  /*Edit Task Section*/
