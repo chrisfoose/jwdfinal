@@ -12,14 +12,12 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
   </head>
   <body>
-    <main>
-
-     <!-- Navbar-->
-   <nav class="navbar navbar-expand-lg bg-transparent navbar-transparent">
+    <!-- Navbar-->
+   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
     <a href="welcome.html" class="navbar-brand" style="color:white" !important>ToDoozy</a>
- 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+    <!-- Made it possible to click on the navbar icon & visibility see the icon -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navmenu">
@@ -31,45 +29,86 @@
          <a href="addtask.html" class="nav-link" style="color:white" !important>Add Task</a>
        </li>
       </ul>
-      </div>
-     </div>
+    </div>
+    </div>
    </nav>
-
+       <main>
           <!-- NEED HELP MAKING THIS RESPONSIVE -->
+          <!-- Fixed this page and created a form -->
+           <div class="container">              
+             <h1 class="task-name" contenteditable="true">Task Name</h1>
+            <form>
+            <div class="form-group row">
+              <label for="assigned-to" class="col-sm-2 col-form-label">Assigned To:</label>
+              <div class="col-sm-10">
+                  <input type="text" class="form-control bg-light" id="addAssignedTo" placeholder="Who is responsible for this lovely task?">
+              </div>
+          </div>
+            <div class="form-group row"> 
+              <label for="status" class="col-sm-2 col-form-label">Status:</label>
+              <div class="col-sm-10">
+                  <!--Thinking of adding another option to give them steps-->
+              <select class="form-control bg-light" id="status"> 
+                  <option>Select your status</option>                
+                  <option>In Progress</option>
+                  <option>Upcoming</option>
+                  <option>Completed</option>
+              </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="due-date" class="col-sm-2 col-form-label">Due Date:</label>
+              <div class="col-sm-10">
+                <input class="bg-light" type="date" id="selectDueDate" name="due-date"></input>
+              </div>
+          </div>
+            <div class="form-group row">
+              <label for="addTaskDescription" class="col-sm-2 col-form-label">Task Description:</label>
+              <div class="col-sm-10">
+                <textarea class="form-control bg-light" id="addTaskDescription" rows="4" placeholder="Task Description"></textarea>
+              </div>
+            </div>
+            <label for="agree send_newletter" class="col-sm-2 col-form-label">Sub Tasks:</label>
+            <div class="checkboxsubtask sub-tasks">
+            <div class="form-check col-sm-10">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Sub Task 1
+              </label>
+            </div>
+            <div class="form-check col-sm-10">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+              <label class="form-check-label" for="flexCheckChecked">
+                Sub Task 2
+              </label>
+            </div>
+            <div class="form-check col-sm-10">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+              <label class="form-check-label" for="flexCheckChecked">
+                Sub Task 3
+              </label>
+            </div>  
+            </div>
+          </div>
+          <!-- Anchor style button -->
+          <div class=" col-sm-10" id="deletesavebtn" >
+            <a class="btn savetask-button" href="#" role="button">Save Task</a>
+            <a class="btn deletetask-button" href="#" role="button">Delete Task</a>
+           </div>
+          </form>
+        </div>
+        </div>
 
-          
-        <h1 class="task-name">Task Name</h1>
-        <a href=""><button class="deletetask-button">Delete Task</button></a>
-        <a href=""><button class="savetask-button">Save Task</button></a>
+        
 
-
-        <h6 class="status">Status</h6>
-
-        <h6 class="due-date">Due Date</h6>
-
-        <h6 class="description">Description</h6>
-              <blockquote contenteditable="true">
-        <p>Add Task Description</p>
-    </blockquote>
-
-        <h6 class="sub-tasks">Sub Tasks</h6>
-
-        <div class="checkboxsubtask">
+       
             <div>
-            <input type="checkbox" name="send_newsletter" id="send_newsletter" />
-            <label for="send_newsletter">Sub Task 1</label>
+            
             </div>
             <div>
-            <input type="checkbox" name="agree" id="agree" value="yes agree"/>
-            <label for="agree">Sub Task 2</label>
+           
             </div>
-            </form>
             </div>
-
-        <h6 class="assigned-to">Assigned To</h6>
-
-
-
 
 
 

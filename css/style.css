@@ -38,6 +38,7 @@ body {
 
  /*Alternate Dashboard Section*/
 
+ /* below is the style for the grid in dashboard delete when need to */
 .grid-container {
   margin: 10px;
   height: 300px;
@@ -74,13 +75,25 @@ body {
   line-height: 27px;
 
 }
+/* styling the Due Date button IDk */
+/* .dueDatebtn {
+  background:linear-gradient(to bottom, #ffffff 5%, #ebe1e1 100%);
+  background-color:#ededed;
+  border-radius:26px;
+  border: 0px;
+  color:#292929;
+  font-family:Arial;
+  padding:13px 30px;
+  text-decoration:none;
+} */
+/* delete Stop */
 
 .categories {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto auto;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 20px;
 
 }
 
@@ -142,58 +155,16 @@ body {
   margin-top:10px;
   font-family:Arial;
 }
+/* make centered the button, I'm unsure so do what you wish */
 .wbutton {
-  text-align: right;
+  display:flex;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
   
 }
 /* Stuck right there */
  .welcome-button {
-  box-shadow: 0px 3px 27px 5px #dbdbdb;
-  box-shadow: 0px 0px 0px 0px #ffffff;
-  background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
-  background-color:#ededed;
-  border-radius:26px;
-  cursor:pointer;
-  border: 0px;
-  color:#777777;
-  font-family:Arial;
-  font-size:19px;
-  padding:13px 30px;
-  text-decoration:none;
-  margin-top: 380px;
-}
-
- .welcome-button:hover {
-  background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%); background-color:#dfdfdf;
-  border: 0px;
- }
-
-  .welcome-button:active {
-    position:relative;
-    top:1px; 
-    border: 0px;
-  }
-
- /*Add Task Section*/
- .addResetTask {
-  display: inline-block;
-  padding: 10px;
-  margin-left: 50px;
-}
-
-
- /*Edit Task Section*/
-.task-name {
-
-    text-align: left;
-    color:black;
-    margin-left: 400px;
-    margin-top: 50px;
-    padding: 10px;
-}
-
-.deletetask-button {
-  position:absolute; bottom: 35px; right:500px; 
   background:linear-gradient(to bottom, #ffffff 5%, #ebe1e1 100%);
   background-color:#ededed;
   border-radius:26px;
@@ -203,10 +174,111 @@ body {
   font-size:19px;
   padding:13px 30px;
   text-decoration:none;
+  margin-top: 380px;
+  
+}
+
+ .welcome-button:hover {
+  background:linear-gradient(to bottom, #ebe1e1 5%, #ffffff 100%); 
+  background-color:#dfdfdf;
+  border: 0px;
+ }
+
+  .welcome-button:active {
+    position:relative;
+    top:1px; 
+    border: 0px;
+  }
+
+ /*Add Task Page*/
+ #addResetTaskbtn {
+  padding: 10px;
+  display:flex;
+  justify-content:center;
+  margin:0 auto;
+  margin-right: 9px;
+}
+/* Added similar feature to theses button like the other buttons */
+#addTask-button{
+  background:linear-gradient(to bottom, #ffffff 5%, #ebe1e1 100%);
+  background-color:#ededed;
+  border-radius:26px;
+  border: 0px;
+  color:#292929;
+  font-family:Arial;
+  font-size:19px;
+  padding:13px 30px;
+  text-decoration:none;
+  text-align: center;
+  margin-right: 20px;
+  }
+  #addTask-button:hover {
+    background:linear-gradient(to bottom, #ebe1e1 5%, #ffffff 100%); background-color:#dfdfdf;
+    border: 0px;
+   }
+  
+   #addTask-button:active {
+      position:relative;
+      top:1px; 
+      border: 0px;
+    }
+
+#resetTask-button {
+  background:linear-gradient(to bottom, #ffffff 5%, #ebe1e1 100%);
+  background-color:#ededed;
+  border-radius:26px;
+  border: 0px;
+  color:#292929;
+  font-family:Arial;
+  font-size:19px;
+  padding:13px 30px;
+  text-decoration:none;
+  text-align: center;
+  margin-left: 50px;
+}
+#resetTask-button:hover {
+  background:linear-gradient(to bottom, #ebe1e1 5%, #ffffff 100%); 
+  background-color:#dfdfdf;
+  border: 0px;
+ }
+
+  #resetTask-button:active {
+    position:relative;
+    top:1px; 
+    border: 0px;
+  }
+
+ /*Edit Task Section*/
+.task-name {
+    text-align: left;
+    color:black;
+}
+#deletesavebtn {
+  padding: 10px;
+  display:flex;
+  justify-content:center;
+  margin:0 auto;
+  margin-right: 9px;
+  
+}
+
+.deletetask-button { 
+  background:linear-gradient(to bottom, #ffffff 5%, #ebe1e1 100%);
+  background-color:#ededed;
+  border-radius:26px;
+  border: 0px;
+  color:#292929;
+  font-family:Arial;
+  font-size:19px;
+  padding:13px 30px;
+  text-decoration:none;
+  text-align: center;
+  margin-left: 20px;
 }
 
 .deletetask-button:hover {
-  background:linear-gradient(to bottom, #ebe1e1 5%, #ffffff 100%); background-color:#dfdfdf;
+  background:linear-gradient(to bottom, #ebe1e1 5%, #ffffff 100%); 
+  background-color:#dfdfdf;
   border: 0px;
 
  }
@@ -220,7 +292,6 @@ body {
 
 
   .savetask-button {
-    position:absolute; bottom: 35px; left:600px; 
     background:linear-gradient(to bottom, #ffffff 5%, #ebe1e1 100%);
     background-color:#ededed;
     border-radius:26px;
@@ -230,80 +301,30 @@ body {
     font-size:19px;
     padding:13px 30px;
     text-decoration:none;
+    text-align: center;
+    margin-right: 50px;
   }
   
   .savetask-button:hover {
-    background:linear-gradient(to bottom, #ebe1e1 5%, #ffffff 100%); background-color:#dfdfdf;
+    background:linear-gradient(to bottom, #ebe1e1 5%, #ffffff 100%); 
+    background-color:#dfdfdf;
     border: 0px;
-  
    }
   
     .savetask-button:active {
       position:relative;
       top:1px; 
       border: 0px;
-  
     }
-  
-
-
-  .status {
-
-    text-align: left;
-    color:rgb(255, 255, 255);
-    margin-left: 400px;
-    margin-top: 50px;
-    padding: 10px;
-}
-
-.due-date {
-
-  text-align: left;
-  color:rgb(255, 255, 255);
-  margin-left: 400px;
-  margin-top: 50px;
-  padding: 10px;
-}
-
-
-.description {
-
-  text-align: left;
-  color:rgb(255, 255, 255);
-  margin-left: 400px;
-  margin-top: 50px;
-  margin-bottom: 20px;
-  padding: 10px;
-}
-
-.sub-tasks {
-
-  text-align: left;
-  color:rgb(255, 255, 255);
-  margin-left: 400px;
-  margin-top: 50px;
-  padding: 10px;
-}
-
 .assigned-to {
-
-  text-align: left;
   color:rgb(255, 255, 255);
-  margin-left: 400px;
-  margin-top: 50px;
-  padding: 10px;
+  
 }
 
 blockquote {
   background: #eee;
-  border-radius: 0px;
-  margin-left: 410px;
-  margin-right: 400px;
-  line-height: normal;
 }
 
 
 .checkboxsubtask {
-  margin-left: 410px;
-
 }

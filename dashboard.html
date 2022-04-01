@@ -12,11 +12,12 @@
   </head>
 
   <body>
+    <main>
 
        <!-- Navbar-->
-   <nav class="navbar navbar-expand-lg bg-transparent navbar-transparent">
+   <nav class="navbar navbar-expand-lg navbar-light ">
     <a href="welcome.html" class="navbar-brand" style="color:white" !important>ToDoozy</a>
-    <!-- Made it possible to click on the navbar icon but unable to visibility see the icon -->
+    <!-- Made it possible to click on the navbar icon & visibility see the icon -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -34,7 +35,7 @@
            <!-- THIS CAN REPLACE INDEX.HTML IF WE CAN MAKE IT RESPONSIVE -->
 
 
-    <main>
+    
       <!-- NEED HELP MAKING THIS RESPONSIVE -->
       <div class="container">
           <div class="taskbutton text-right">
@@ -44,10 +45,10 @@
             <h1 class="dashboard-title display-3">My Tasks</h1>
           </div>
       </div>
-      <div class="contianer">
+      <div class="container">
         <div class="row rowheaders">
           <!-- In Progress secton -->
-          <!-- To work must add card body within the col-sm/ make a div -->
+         <!-- To work must add div called card body within the col-sm div-->
           <div class="col-sm">
             <div class="categories">
               <h2 class="card task-title grid-categories" style="width: 18rem;">In Progress</h2>
@@ -56,62 +57,56 @@
             <div class="card-body">
               <h3 class="card-title">Task 1</h3>
               <p class="card-text">Task  Description</p>
-              <span class="badge badge-primary">IN PROGRESS</span>
               <a href="#" class="btn btn-primary">Due Date</a>
           </div>
             </div> 
             <div class="card col-sm border border-dark" style="width: 18rem; background-color:#f5ececab;">
               <div class="card-body">
-                <h3 class="card-title">Task Name</h3>
+                <h3 class="card-title">Task 1</h3>
                 <p class="card-text">Task Description</p>
-                <span class="badge badge-primary">IN PROGRESS</span>
-                <a href="#" class="btn btn-primary">Delete</a>
+                <a href="#" class="btn btn-primary">Due Date</a>
             </div>
             </div> 
           </div> 
           <!-- Upcoming Section -->
-          <!-- To work must add card body within the col-sm/ make a div -->
+         <!-- To work must add div called card body within the col-sm div -->
             <div class="col-sm">
               <div class="categories">
                 <h2 class="card task-title grid-categories" style="width: 18rem;">Upcoming</h2>
              </div>
               <div class="card col-sm border border-dark" style="width: 18rem; background-color:#f5ececab;">
                 <div class="card-body">
-                  <h3 class="card-title">Task 1</h3>
+                  <h3 class="card-title">Task 2</h3>
                   <p class="card-text">Task  Description</p>
-                  <span class="badge badge-primary">IN PROGRESS</span>
-                  <a href="#" class="btn btn-primary">Due Date</a>
+                  <a href="#" class="btn btn-primary dueDatebtn">Due Date</a>
               </div>
                 </div> 
                 <div class="card col-sm border border-dark" style="width: 18rem; background-color:#f5ececab;">                
                   <div class="card-body">
-                      <h3 class="card-title">Task 1</h3>
+                      <h3 class="card-title">Task 2</h3>
                       <p class="card-text">Task Description</p>
-                      <span class="badge badge-primary">IN PROGRESS</span>
                       <a href="#" class="btn btn-primary">Due Date</a>
                   </div>
               </div>
             </div>
             <!-- Completed Section -->
-            <!-- To work must add card body within the col-sm & make a div -->
+            <!-- To work must add div called card body within the col-sm div -->
           <div class="col-sm">
             <div class="categories">
                 <h2 class="card task-title grid-categories" style="width: 18rem;">Completed</h2>
               </div>   
               <div class="card col-sm border border-dark" style="width:18rem; background-color:#f5ececab;">           
               <div class="card-body">
-                  <h3 class="card-title">Task 2</h3>
+                  <h3 class="card-title">Task 3</h3>
                   <p class="card-text">Task Description</p>
-                  <span class="badge badge-primary">IN PROGRESS</span>
-                  <a href="#" class="btn btn-primary">Delete</a>
+                  <a href="#" class="btn btn-primary">Due Date</a>
               </div>
               </div>
             <div class="card col-sm border border-dark" style="width:18rem; background-color:#f5ececab;">           
               <div class="card-body">
-                  <h2 class="card-title">Task 2</h2>
+                  <h2 class="card-title">Task 3</h2>
                   <p class="card-text">Task Description</p>
-                  <span class="badge badge-primary">IN PROGRESS</span>
-                  <a href="#" class="btn btn-primary">Delete</a>
+                  <a href="#" class="btn btn-primary">Due Date</a>
               </div>
               </div>
           </div>
@@ -119,8 +114,8 @@
         </div>
       </div>
 
-      
-         <div class="categories">
+       <!-- alternative sample card using grid-->
+         <!-- <div class="categories">
       <div class="grid-categories">
         <h1 class="task-title">In Progress</h1>
         
@@ -135,8 +130,10 @@
       </div>
     </div>
     </div>
-  </div> -->
-    <!-- alternative sample card using grid-->
+  </div> 
+
+
+   
 
  <div class="grid-container">
     <div class="grid-item">
@@ -171,7 +168,7 @@
     </div>
   
   
-  </div> -->
+  </div>  -->
 
   <!-- Saving for example/ just remove the comment section to use <div class="grid1" style="--bs-columns: 4;">
     <div>
