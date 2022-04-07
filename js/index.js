@@ -29,6 +29,9 @@ const newTaskDescription = document.querySelector('#newTaskDescription');
 const newTaskAssignedTo = document.querySelector('#newTaskAssignedTo');
 const newTaskDueDate = document.querySelector('#newTaskDueDate');
 
+//Let's write that validation code!
+
+
 // // Task 5: Tested Code - Step 1  Worked well😁
 // let taskHtml = createTaskHTML();
 // console.log(taskHtml);
