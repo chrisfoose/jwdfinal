@@ -1,18 +1,18 @@
 console.log("Connected");
 // create task HTML function
-// let createTaskHTML = (name,description,assignedTo,dueDate,status) => {
-//     // string using template literals
-//     const html = ` <div class="card col-sm border border-dark" style="width: 18rem; background-color:#f5ececab;">
-//     <div class="card-body">
-//       <h3 class="card-title">${name}</h3>
-//       <p class="card-text">${description}</p>
-//       <a href="#" class="btn btn-primary">Due Date: ${dueDate}</a>
-//   </div> `;
-//      console.log(html);
-//      return html;
-// };
+let createTaskHTML = (name,description,assignedTo,dueDate,status) => {
+    // string using template literals
+    const html = ` <div class="card col-sm border border-dark" style="width: 18rem; background-color:#f5ececab;">
+    <div class="card-body">
+      <h3 class="card-title">${name}</h3>
+      <p class="card-text">${description}</p>
+      <a href="#" class="btn btn-primary">Due Date: ${dueDate}</a>
+  </div> `;
+     console.log(html);
+     return html;
+};
 
-// 
+
 class  taskManager {
     constructor(currentId = 0) { 
         this.tasks = [];
@@ -36,14 +36,25 @@ class  taskManager {
    }  
     
 //    Step 2: render method() used to display task on the page
-//    render()  {
-//        const taskHtmlList = [];
-//     for(let i = 0 ; i <this.tasks.length; i++){ 
+   render()  {
+       const taskHtmlList = []; 
+       for(let i = 0 ; i <this.tasks.length; i++){
+        const newDate = new Date(currentTask.dueDate); 
+        // styling how the date will appear 
+         const formattedDate = (newDate.getMonth() + 1) + "/" + newDate.getDate() + "/" + newDate.getFullYear(); 
+         
+         const taskHtml = createTaskHTML(currentTask.name, currentTask.description,currentTask.assignedTo, formattedDate, currentTask.status);
+       }
+
+       tasksHtmlList.push(tasksHtml);
+
+   }
+//    
 //        const currentTask = this.tasks[i];
-//         const newDate = new Date(currentTask.dueDate);
-//         // styling how the date will appear 
-//         const formattedDate = (newDate.getMonth() + 1) + "/" + newDate.getDate() + "/" + newDate.getFullYear();
-//         const taskHtml = createTaskHTML(currentTask.name, currentTask.description,currentTask.assignedTo, formattedDate, currentTask.status);
+//         
+//         
+        
+        
         
 //         taskHtmlList.push(taskHtml);
 //         console.log(taskHtmlList);
