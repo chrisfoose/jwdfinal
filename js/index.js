@@ -34,6 +34,14 @@ addTaskForm.addEventListener('submit',  (event) => {
     const status = selectStatus.value;
     
 
+
+
+
+
+
+
+
+    
     // Add the task to the task manager
     taskManager.addtask(name,description,assignedTo,dueDate,status);
 
