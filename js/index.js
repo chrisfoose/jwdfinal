@@ -22,6 +22,13 @@ addTaskForm.addEventListener('submit',  (event) => {
     // Add the task to the task manager
     taskManager.addtask(name,description,assignedTo,dueDate,status);
 });
+
+//selectiing the inputs from the fields
+const newTaskNameInput = document.querySelector('#newTaskNameInput');
+const newTaskDescription = document.querySelector('#newTaskDescription');
+const newTaskAssignedTo = document.querySelector('#newTaskAssignedTo');
+const newTaskDueDate = document.querySelector('#newTaskDueDate');
+
 // // Task 5: Tested Code - Step 1  Worked well😁
 // let taskHtml = createTaskHTML();
 // console.log(taskHtml);
