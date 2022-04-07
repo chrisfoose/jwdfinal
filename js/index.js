@@ -2,9 +2,9 @@ console.log("Connected!");
 // testing code: new instance of taskManager
 // use addtask method to add a new task to the manager
 // must return an empty arry in the brower
-// let newTask = new taskManager();
-// newTask.addtask();
-// console.log(newTask.addtask);
+let newTask = new taskManager();
+console.log(newTask.addtask);
+
 
 
 // //  declare taskManager to a variable
@@ -19,8 +19,13 @@ addTaskForm.addEventListener('submit',  (event) => {
     // prevent default method
     event.preventDefault();
     
+
+
+
     // Add the task to the task manager
     taskManager.addtask(name,description,assignedTo,dueDate,status);
+
+
 });
 // // Task 5: Tested Code - Step 1  Worked well😁
 // let taskHtml = createTaskHTML();
