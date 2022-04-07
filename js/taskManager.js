@@ -37,26 +37,32 @@ class  taskManager {
     
 //    Step 2: render method() used to display task on the page
    render()  {
+    //    create an array to store the tasks
        const taskHtmlList = []; 
-       for(let i = 0 ; i <this.tasks.length; i++){
+    //    loop over our tasks and create the html
+       for(let i = 0 ; i <this.tasks.length; i++){       
+        //     currentTask in loop
+        const currentTask = this.tasks[i];
+
         const newDate = new Date(currentTask.dueDate); 
         // styling how the date will appear 
          const formattedDate = (newDate.getMonth() + 1) + "/" + newDate.getDate() + "/" + newDate.getFullYear(); 
          
          const taskHtml = createTaskHTML(currentTask.name, currentTask.description,currentTask.assignedTo, formattedDate, currentTask.status);
+        //  push into the array
+         taskHtmlList.push(taskHtml);
        }
 
-       tasksHtmlList.push(tasksHtml);
+      
 
    }
 //    
-//        const currentTask = this.tasks[i];
+
 //         
 //         
         
         
         
-//         taskHtmlList.push(taskHtml);
 //         console.log(taskHtmlList);
 //     }
     // seperate w. newline 
