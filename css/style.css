@@ -35,7 +35,11 @@ body {
   padding-right: 100px;
   grid-template-rows: 33% 33% 33%;
 }
-
+.cardlass {
+  display:flex;
+  justify-content: center;
+  
+}
  /*Alternate Dashboard Section*/
 
  /* below is the style for the grid in dashboard delete when need to */
@@ -249,7 +253,10 @@ body {
   }
 
  /*Edit Task Section*/
-.task-name {
+.checklist {
+  margin-left: 0 auto;
+}
+ .task-name {
     text-align: left;
     color:black;
 }
