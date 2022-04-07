@@ -33,7 +33,7 @@ addTaskForm.addEventListener('submit',  (event) => {
     const dueDate = selectDueDate.value;
     const status = selectStatus.value;
     
-    
+
     // Add the task to the task manager
     taskManager.addtask(name,description,assignedTo,dueDate,status);
 
@@ -49,26 +49,16 @@ addTaskForm.addEventListener('submit',  (event) => {
 
     console.log(add)
 
-});
-
-
-
-//selectiing the inputs from the fields
-const newTaskNameInput = document.querySelector('#newTaskNameInput');
-const newTaskDescription = document.querySelector('#newTaskDescription');
-const newTaskAssignedTo = document.querySelector('#newTaskAssignedTo');
-const newTaskDueDate = document.querySelector('#newTaskDueDate');
-
-//Let's write that validation code!
+    //Let's write that validation code!
 //validate that the name is not empty
 
-// function validateName() {
-//     let name = document.getElementById.addTaskName;
-//     if (name == "") {
-//         alert('Task Name cannot be left blank!');
-//         return false;
-//     }
-// ;}
+    function validateName() {
+    let name = document.getElementById.addTaskName;
+    if (name == "") {
+        alert('Task Name cannot be left blank!');
+        return false;
+    }
+;}
 
 
 
