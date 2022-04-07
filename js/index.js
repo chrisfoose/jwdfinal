@@ -59,14 +59,41 @@ addTaskForm.addEventListener('submit',  (event) => {
 
 });
 
+<<<<<<< HEAD
 // //selectiing the inputs from the fields
 // const newTaskNameInput = document.querySelector('#newTaskNameInput');
 // const newTaskDescription = document.querySelector('#newTaskDescription');
 // const newTaskAssignedTo = document.querySelector('#newTaskAssignedTo');
 // const newTaskDueDate = document.querySelector('#newTaskDueDate');
+=======
+
+
+//selectiing the inputs from the fields
+const newTaskNameInput = document.querySelector('#newTaskNameInput');
+const newTaskDescription = document.querySelector('#newTaskDescription');
+const newTaskAssignedTo = document.querySelector('#newTaskAssignedTo');
+const newTaskDueDate = document.querySelector('#newTaskDueDate');
+>>>>>>> chrisfoose
 
 //Let's write that validation code!
+//validate that the name is not empty
 
+function validateName() {
+    let name = document.getElementById.addTaskName;
+    if (name == "") {
+        alert('Task Name cannot be left blank!');
+        return false;
+    }
+;}
+
+
+
+//Clear the forms
+newTaskNameInput.value = '';
+newTaskDescription.value = '';
+newTaskAssignedTo.value = '';
+newTaskDueDate.value = '';
+newTaskStatus.value = '';
 
 // // Task 5: Tested Code - Step 1  Worked well😁
 // let taskHtml = createTaskHTML();
