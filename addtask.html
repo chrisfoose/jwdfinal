@@ -23,7 +23,7 @@
               <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar-nav ml-auto" style="text-align:right" !important>
                   <li class="nav-item">
-                    <a href="dashboard.html" class="nav-link" style="color:white" !important>Dashboard</a>
+                    <a href="./index.html" class="nav-link" style="color:white" !important>Dashboard</a>
                   </li>
                   <li class="nav-item">
                    <a href="addtask.html" class="nav-link" style="color:white" !important>Add Task</a>
@@ -38,7 +38,7 @@
         <div class="container">
             <h1>Add Task</h1>
             <br>
-        <form>
+        <form id="addTaskForm">
             <div class="form-group row">
               <label for="addTaskName" class="col-sm-2 col-form-label">Task Name:</label>
               <div class="col-sm-10">
@@ -68,10 +68,10 @@
                 <div class="col-sm-10">
                     <!--Thinking of adding another option to give them steps-->
                 <select class="form-control bg-light" id="selectStatus"> 
-                    <option>Select your status</option>                
-                    <option>In Progress</option>
-                    <option>Upcoming</option>
-                    <option>Completed</option>
+                    <option >Select your status</option>                
+                    <option id="inprogress">In Progress</option>
+                    <option id="upcoming">Upcoming</option>
+                    <option id="completed">Completed</option>
                 </select>
                 </div>
               </div>
@@ -79,8 +79,9 @@
             <div class="form-group row ">
               <div class=" form-group col-sm-10" id ="addResetTaskbtn">
                   <!--Possible Anchor for the buttons-->
-                 <button type="submit" class="btn btn-lg addTask-button" id="addTask-button">Add Task</button> 
-                 <button type="submit" class="btn btn-lg resetTask-button" id="resetTask-button">Reset Task</button>
+                 
+                 <a href="#" class="btn btn-lg addTask-button" type="submit"  id="addTask-button"> Add Task </a>
+                 <button  type="submit" class="btn btn-lg resetTask-button" id="resetTask-button">Reset Task</button>
                   
               </div> 
              

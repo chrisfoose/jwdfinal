@@ -24,7 +24,7 @@
     <div class="collapse navbar-collapse" id="navmenu">
       <ul class="navbar-nav ml-auto" style="text-align:right" !important>
         <li class="nav-item">
-          <a href="dashboard.html" class="nav-link" style="color:white" !important>Dashboard</a>
+          <a href="./index.html" class="nav-link" style="color:white" !important>Dashboard</a>
         </li>
         <li class="nav-item">
          <a href="addtask.html" class="nav-link" style="color:white" !important>Add Task</a>
@@ -53,6 +53,7 @@
             <div class="categories">
               <h2 class="card task-title grid-categories" style="width: 18rem;">In Progress</h2>
            </div>
+           <div id ='inprogressTask'>
            <div class="card col-sm border border-dark" style="width: 18rem; background-color:#f5ececab;">
             <div class="card-body">
               <h3 class="card-title">Task 1</h3>
@@ -67,12 +68,16 @@
                 <a href="#" class="btn btn-primary">Due Date</a>
             </div>
             </div> 
+          </div>
           </div> 
           <!-- Upcoming Section -->
          <!-- To work must add div called card body within the col-sm div -->
             <div class="col-sm">
               <div class="categories">
                 <h2 class="card task-title grid-categories" style="width: 18rem;">Upcoming</h2>
+             </div>
+             <div id="upcomingTask"> 
+               <div></div>
              </div>
               <div class="card col-sm border border-dark" style="width: 18rem; background-color:#f5ececab;">
                 <div class="card-body">
@@ -88,6 +93,7 @@
                       <a href="#" class="btn btn-primary">Due Date</a>
                   </div>
               </div>
+            
             </div>
             <!-- Completed Section -->
             <!-- To work must add div called card body within the col-sm div -->
@@ -95,6 +101,7 @@
             <div class="categories">
                 <h2 class="card task-title grid-categories" style="width: 18rem;">Completed</h2>
               </div>   
+              <div id="completedTask">
               <div class="card col-sm border border-dark" style="width:18rem; background-color:#f5ececab;">           
               <div class="card-body">
                   <h3 class="card-title">Task 3</h3>
@@ -108,7 +115,8 @@
                   <p class="card-text">Task Description</p>
                   <a href="#" class="btn btn-primary">Due Date</a>
               </div>
-              </div>
+              </div> 
+            </div>
           </div>
           </div>
         </div>
