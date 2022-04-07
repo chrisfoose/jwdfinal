@@ -55,9 +55,28 @@ addTaskForm.addEventListener('submit',  (event) => {
     function validateName() {
     let name = document.getElementById.addTaskName;
     if (name == "") {
-        alert('Task Name cannot be left blank!');
+        alert('Task Name can not be left blank!');
         return false;
     }
+
+    function validateDescription() {
+        let description = document.getElementById.addTaskDescription;
+        if (description ="") {
+            alert('Description can not be left blank!');
+            return false;
+        }
+    }
+
+    function validateAssignedTo() {
+        let assigned = document.getElementById.addAssignedTo;
+        if (assigned = '') {
+            alert('Assigned to can not be left blank!');
+            return false;
+        }
+    }
+
+
+//code validation end
 ;}
 
 
