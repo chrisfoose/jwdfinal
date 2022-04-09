@@ -39,7 +39,7 @@ addTaskForm.addEventListener('submit',  function() {
 
     function validateName() {
     let name = document.getElementById("addTaskName");
-    if (name == "") {
+    if (name.value === "" || name.value  === null) {
         alert('Task Name can not be left blank!');
         alertErr.InnerHTML('Task name can not be left blank!');
         console.log('test validate name');
@@ -48,7 +48,7 @@ addTaskForm.addEventListener('submit',  function() {
 
     function validateDescription() {
         let description = document.getElementById("addTaskDescription");
-        if (description ="") {
+        if (description.value === "" || description.value === null) {
             alert('Description can not be left blank!');
             alertErr.InnerHTML('Description can not be left blank!');
             console.log('test validate desc');
@@ -58,7 +58,7 @@ addTaskForm.addEventListener('submit',  function() {
 
     function validateAssignedTo() {
         let assigned = document.getElementById("addAssignedTo");
-        if (assigned = '') {
+        if (assigned.value === '' || assigned.value === null) {
             alert('Assigned to can not be left blank!');
             alertErr.InnerHTML('Assigned to can not be left blank!');
             console.log('test assigned to');
@@ -67,7 +67,7 @@ addTaskForm.addEventListener('submit',  function() {
     
     function validateDate() {  // Checks if new task date is less than date for now
         let date = document.getElementById('newTaskDueDate');
-        if (date < date.now()) {
+        if (date < date.now() || date === null) {
             alert('Invalid date entered.');
             alertErr.InnerHTML('Assigned date is in the past');
             console.log('test validate date');
