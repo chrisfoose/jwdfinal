@@ -347,3 +347,7 @@ blockquote {
 
 .checkboxsubtask {
 }
+
+#alertError {
+  display:none;
+}

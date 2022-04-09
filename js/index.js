@@ -41,7 +41,8 @@ addTaskForm.addEventListener('submit',  function() {
     let name = document.getElementById("addTaskName");
     if (name == "") {
         alert('Task Name can not be left blank!');
-        alertErr.InnerHTML('Task name can not be left blank!')
+        alertErr.InnerHTML('Task name can not be left blank!');
+        console.log('test validate name');
         return false;
     };
 
@@ -50,6 +51,7 @@ addTaskForm.addEventListener('submit',  function() {
         if (description ="") {
             alert('Description can not be left blank!');
             alertErr.InnerHTML('Description can not be left blank!');
+            console.log('test validate desc');
             return false;
         }
     };
@@ -59,6 +61,7 @@ addTaskForm.addEventListener('submit',  function() {
         if (assigned = '') {
             alert('Assigned to can not be left blank!');
             alertErr.InnerHTML('Assigned to can not be left blank!');
+            console.log('test assigned to');
             return false;
         };
     
@@ -67,6 +70,7 @@ addTaskForm.addEventListener('submit',  function() {
         if (date < date.now()) {
             alert('Invalid date entered.');
             alertErr.InnerHTML('Assigned date is in the past');
+            console.log('test validate date');
             return false;
         }
     };
