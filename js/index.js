@@ -14,84 +14,125 @@ const addTaskForm = document.getElementById('addTaskForm');
 // - Display the form html
 // console.log(addTaskForm); 
 
-const addTaskbutton = document.getElementById('#addTask-button');
+ // // Task 5: Tested Code - Step 1  Worked well😁
+// let taskHtml = createTaskHTML();
+// console.log(taskHtml);
+
+// const addTaskbutton = document.getElementById('#addTask-button');
 // // add an onsubmit event listener for form
 // document.getElementById('addTaskForm')
-addTaskForm.addEventListener('submit',  function() {
+addTaskForm.addEventListener('submit', event => {
     console.log('working!')
     // prevent default method
     event.preventDefault();
-    newTask.addtask();
-    newTask.render();
+
    
-    // clear form 
-    // addTaskName.value = '';
-    // addTaskDescription.value = '';
-    // addAssignedTo.value = '';
-    // selectDueDate.value = '';
-    // selectStatus.value = '';
+     //     Let's write that validation code!
+    // validate that the name is not empty
+  
+    const name = document.querySelector("#addTaskName").value.trim();
+    const description = document.querySelector("#addTaskDescription").value.trim(); 
+    const dueDate = document.querySelector("#selectDueDate").value.trim();
+    const assignedTo = document.querySelector("#addAssignedTo").value.trim();
+    const status = document.querySelector("#selectStatus");
 
-    console.log(add)
+    const errors = [];
+    if(name === '' || description === '' ||dueDate === '' ||assignedTo === '' ||status === '' )
+      {errors.push("Please fill out all fields!");
+      console.log(errors)
+    }else{
+        console.log('All fields filled!')
+        newTask.render();
 
-    //Let's write that validation code!
-//validate that the name is not empty
-    alertErr = document.getElementById('alertError');  //Sending errors to id alertError
-
-    function validateName() {
-    let name = document.getElementById("addTaskName");
-    if (name == "") {
-        alert('Task Name can not be left blank!');
-        alertErr.InnerHTML('Task name can not be left blank!')
-        return false;
-    };
-
-    function validateDescription() {
-        let description = document.getElementById("addTaskDescription");
-        if (description ="") {
-            alert('Description can not be left blank!');
-            alertErr.InnerHTML('Description can not be left blank!');
-            return false;
-        }
-    };
-
-    function validateAssignedTo() {
-        let assigned = document.getElementById("addAssignedTo");
-        if (assigned = '') {
-            alert('Assigned to can not be left blank!');
-            alertErr.InnerHTML('Assigned to can not be left blank!');
-            return false;
-        };
+      }
+    if(errors.length > 0){
+      for(let i= 0; i < errors.length; i++){
+        Toastify({
+          text: 'Please fill out all fields!',
+          duration:4000,
+          gravity: "top",
+          position:"center",
+          style: {
+            background:"#DF1C24"
+          }
+        }).showToast();
+      }
+    } else 
+    {
+        Toastify({
+          text:"All fields filled!",
+          duration:4000,
+          gravity:"top",
+          position:"center",
+          style: {
+            background:"#4bab4e"
+          }
+        }) .showToast();
+    }  
     
-    function validateDate() {  // Checks if new task date is less than date for now
-        let date = document.getElementById('newTaskDueDate');
-        if (date < date.now()) {
-            alert('Invalid date entered.');
-            alertErr.InnerHTML('Assigned date is in the past');
-            return false;
-        }
-    };
-    }
+    newTask.addtask();
+    
+      // if(name.length === 0 || description.length === 0 || assignedTo.length === 0 || dueDate.length === 0 || status.length === 0){
+      //   console.log('Please fill out all fields!');
+      //   const alertErr = document.getElementById('alertError');  //Sending errors to id alertError
+      //   alertErr.style.display = 'block';
+      // } else {
+      //    console.log('All fields filled!')
+      //   const alertErr = document.getElementById('alertError'); 
+      //   alertErr.style.display = 'none'; 
+      // }
+    
 
 
-//code validation end
-;}
+  
 
-
-
-//Clear the forms
-newTaskNameInput.value = '';
-newTaskDescription.value = '';
-newTaskAssignedTo.value = '';
-newTaskDueDate.value = '';
-newTaskStatus.value = '';
-
-// // Task 5: Tested Code - Step 1  Worked well😁
-// let taskHtml = createTaskHTML();
-// console.log(taskHtml);
+    // clear form - reset it
     addTaskName.value = '';
     addTaskDescription.value = '';
     addAssignedTo.value = '';
     selectDueDate.value = '';
     selectStatus.value ='Select your status';
-    // addTaskForm.reset();
+
 });
+  
+     
+   
+
+
+
+// Chris code 
+
+    // if (name.length === "") {
+    //     // alert('Task Name can not be left blank!');
+    //     alertErr.InnerHTML ='Task name can not be left blank!'
+    // }
+
+    //     
+    //     if (description.length === '') {
+    //         // alert('Description can not be left blank!');
+    //         alertErr.InnerHTML= 'Description can not be left blank!';
+    //     }
+    
+
+
+    //    
+    //     if (assignedTo === '') {
+    //         // alert('Assigned to can not be left blank!');
+    //         alertErr.InnerHTML ='Assigned to can not be left blank!';
+    //     } 
+      
+    
+    //   // Checks if new task date is less than date for now
+    //     let date = document.getElementById('selectDueDate');
+    //     if (date < Date.now()) {
+    //         alert('Invalid date entered.');
+    //         alertErr.InnerHTML = 'Assigned date is in the past';
+    //         return false;
+    //     }
+      
+      
+
+
+//code validation end
+
+
