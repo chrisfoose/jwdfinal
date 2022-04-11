@@ -25,8 +25,8 @@ addTaskForm.addEventListener('submit', event => {
     console.log('working!')
     // prevent default method
     event.preventDefault();
-
-   
+    newTask.render();
+       newTask.addtask();
      //     Let's write that validation code!
     // validate that the name is not empty
   
@@ -34,21 +34,29 @@ addTaskForm.addEventListener('submit', event => {
     const description = document.querySelector("#addTaskDescription").value.trim(); 
     const dueDate = document.querySelector("#selectDueDate").value.trim();
     const assignedTo = document.querySelector("#addAssignedTo").value.trim();
-    const status = document.querySelector("#selectStatus");
+    const status = document.querySelector("#selectStatus").value;
 
     const errors = [];
-    if(name === '' || description === '' ||dueDate === '' ||assignedTo === '' ||status === '' )
-      {errors.push("Please fill out all fields!");
+    if(name === ''|| description === '' ||dueDate === '' || assignedTo === ''||status === ''){
+      errors.push("Please fill out all fields!");
       console.log(errors)
-    }else{
-        console.log('All fields filled!')
-        newTask.render();
-
-      }
+    // if(description === '')
+    //   errors.push("Task Description can't be blank");
+    // if(dueDate === '')  
+    //   errors.push("Due Date can't be blank");
+    // if(assignedTo === '')
+    //   errors.push("Assigned To can't be blank");
+    // if(status === '' )
+    //   {errors.push("Status can't be blank");}
+    //   
+    // } else{
+    //     console.log('All fields filled!')
+        
+      };
     if(errors.length > 0){
       for(let i= 0; i < errors.length; i++){
         Toastify({
-          text: 'Please fill out all fields!',
+          text: errors[i],
           duration:4000,
           gravity: "top",
           position:"center",
@@ -68,9 +76,15 @@ addTaskForm.addEventListener('submit', event => {
             background:"#4bab4e"
           }
         }) .showToast();
-    }  
-    
-    newTask.addtask();
+    }   
+
+    // clear form - reset it
+    addTaskName.value = '';
+    addTaskDescription.value = '';
+    addAssignedTo.value = '';
+    selectDueDate.value = '';
+    selectStatus.value ='Select your status';
+
     
       // if(name.length === 0 || description.length === 0 || assignedTo.length === 0 || dueDate.length === 0 || status.length === 0){
       //   console.log('Please fill out all fields!');
@@ -82,17 +96,7 @@ addTaskForm.addEventListener('submit', event => {
       //   alertErr.style.display = 'none'; 
       // }
     
-
-
-  
-
-    // clear form - reset it
-    addTaskName.value = '';
-    addTaskDescription.value = '';
-    addAssignedTo.value = '';
-    selectDueDate.value = '';
-    selectStatus.value ='Select your status';
-
+   
 });
   
      

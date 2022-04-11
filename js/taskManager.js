@@ -2,15 +2,32 @@ console.log("Connected");
 // create task HTML function
 let createTaskHTML = (name,description,assignedTo,dueDate,status) => {
     // string using template literals
-   const html = `
-   <tr id="taskTablData" style="vertical-align: top; text-align: center;">
-   <td data-label='Task Name'>${name}</td>
-   <td data-label="Task Description"${description}</td>
-   <td data-label="Assigned To">${assignedTo}</td>
-   <td data-label="Status">${status}</td>
-   <td data-label="Due Date">${dueDate}</td>
-   </tr> `
+   const html = `<li class="rainbow-box list-group-item" style= '  background-color: #f5ececab;  
+   border-radius: 26px;
+   border: 0.6px solid black;'>
+   <div class="d-flex w-100 mt-2 justify-content-between align-items-center">
+       <h5>${name}</h5>
+       <span class="badge-success">${status}</span>
+   </div>
+   <div class="d-flex w-100 mb-3 justify-content-between">
+       <p>Assigned To: ${assignedTo}</p>
+       <small>${dueDate}</small>
+   </div>
+   <p>${description}</p>
+   <button type="button" class="rainbow-box2 delete-button btn btn-danger">Delete this task</button>
+   <button type="button" class="done-button btn btn-success">Mark as done</button>
+   
+</li><br>
+`;
 
+//    <tr id="taskTablData">
+//    <td data-label='Task Name'>${name}</td>
+//    <td data-label="Task Description"${description}</td>
+//    <td data-label="Assigned To">${assignedTo}</td>
+//    <td data-label="Status">${status}</td>
+//    <td data-label="Due Date">${dueDate}</td>
+//    </tr> 
+//  style="vertical-align: top; text-align: center
     //    const html = `<div class="card col-sm border border-dark" style="width: 18rem; background-color:#f5ececab; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);transition: 0.3s; margin: 2.5rem; margin-left: auto; margin-right: auto;align-items: center; justify-content: center; padding: 10px; box-sizing: border-box; border-radius: 26px; ">
 //    <div class="card-body">
 //      <h3 class="card-title">${name}</h3>
@@ -68,16 +85,19 @@ class  TaskManager {
             }
 
         // Set the inner html of the tasksList on the page
-            for(let i = 0; i < tasksHtmlList.length; i++){
-                 const tasksList = document.getElementById('taskTableRow');
-                tasksList.innerHTML =tasksHtmlList;
-        }
+        //     for(let i = 0; i < tasksHtmlList.length; i++){
+        //          const tasksList = document.getElementById('taskTableRow');
+        //         tasksList.innerHTML =tasksHtmlList;
+        // }
          //  Create the tasksHtml by joining each item in the tasksHtmlList
     //     with a new line in between each item.
     //     seperate w. newline 
             const tasksHtml = tasksHtmlList.join('\n');
-            const tasksList = document.querySelector('#taskTableRow'); 
+            const tasksList = document.querySelector('#taskList')
+            // const tasksList = document.querySelector('#taskTableRow'); 
             tasksList.innerHTML = tasksHtml;
+
+            
     } 
 
    };

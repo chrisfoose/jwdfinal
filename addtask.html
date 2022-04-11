@@ -25,11 +25,11 @@
               <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar-nav ml-auto" style="text-align:right" !important>
                   <li class="nav-item">
-                    <a href="./index.html" class="nav-link" style="color:white" !important>Dashboard</a>
+                    <a href="addtask.html" class="nav-link" style="color:white" !important>Add Task</a>
                   </li>
-                  <li class="nav-item">
-                   <a href="addtask.html" class="nav-link" style="color:white" !important>Add Task</a>
-                 </li>
+                   <li class="nav-item">
+                     <a href="#" class="nav-link" style="color:white" !important>Manage Task</a>
+                   </li>
                 </ul>
                 </div>
              </nav>
@@ -94,40 +94,50 @@
              
               </div>
           </form>
+          </div>
+          <div class="container task-container">
+            <div class='col-12'> 
+            <h4 class="table-header" style="text-align:center;">Task List</h4>
+            <span id="taskList"></span>
+          </div>
+          </div>
+
           
-          <div class="table-container">
-              <h4 class="table-header">Task List</h4>
-               <table class="table">
+
+          <!-- <div class="container table-container table-responsive-md"> -->
+             
+               <!-- <table class="table table-bordered table-hover" cellspacing="0" cellpadding="0">
                  <thead>
-                   <tr>
-                     <th>Task Name</th>
-                     <th> Task Description</th>
-                     <th> Assigned To</th>
-                     <th>Status</th>
-                     <th>Due Date</th>
+                   <tr> -->
+                     <!-- <th  scope="col">ID</th> -->
+                     <!-- <th scope="col">Task Name</th>
+                     <th  scope="col"> Task Description</th>
+                     <th  scope="col"> Assigned To</th>
+                     <th  scope="col">Status</th>
+                     <th  scope="col">Due Date</th>
                    </tr>
                  </thead>
-                 <tbody id='taskTableRow'>
+                 <tbody id='taskTableRow'> -->
                    <!-- <tr id="taskTablData">
-                    <td data-label="ID">1</td>
+                     <td data-label="ID">1</td>
                      <td data-label='Task Name'>Final Project</td>
                      <td data-label="Task Description">Make a day</td>
                      <td data-label="Assigned To">Self</td>
                      <td data-label="Status">Upcoming</td>
                      <td data-label="Due Date">03/09/2022</td>
-                   </tr>
-                   <tr id="taskTablData">
-                    <td data-label="ID">1</td>
-                     <td data-label='Task Name'>Final Project</td>
+                   </tr> -->
+                   <!-- <tr id="taskTablData"> -->
+                    <!-- <td data-label="ID">1</td> -->
+                     <!-- <td data-label='Task Name'>Final Project</td>
                      <td data-label="Task Description">Make a day</td>
                      <td data-label="Assigned To">Self</td>
                      <td data-label="Status">Upcoming</td>
                      <td data-label="Due Date">03/09/2022</td>
-                  </tr> -->
+                  </tr> 
                  </tbody>
                </table>
           </div>
-        </div>
+        </div> -->
     </main>
     <!-- Toastify JS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
