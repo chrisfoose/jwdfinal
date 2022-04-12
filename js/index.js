@@ -49,8 +49,8 @@ addTaskForm.addEventListener('submit', event => {
     // if(status === '' )
     //   {errors.push("Status can't be blank");}
     //   
-    // } else{
-    //     console.log('All fields filled!')
+    } else{
+        console.log('All fields filled!')
         
       };
     if(errors.length > 0){
@@ -134,9 +134,29 @@ addTaskForm.addEventListener('submit', event => {
     //         return false;
     //     }
       
-      
+//code validation end      
+
+// Mark Done Button : Print twice when click mark done button
+const tasksList = document.querySelector('#taskList');
+tasksList.addEventListener('click', (event) => {
+  if (event.target.classList.contains('done-button')){
+    // Get the parent Task
+    const parentTask = event.target.parentElement;
+    console.log(parentTask);
+    const taskId = Number(parentTask.dataset.taskId);
+    console.log(taskId);
+    const task = newTask.getTaskById(taskId);
+    // change status 
+    task.status = 'Completed';
+
+    newTask.render();
+  }
+  console.log(tasksList);
+});
 
 
-//code validation end
+
+
+
 
 

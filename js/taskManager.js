@@ -1,8 +1,8 @@
 console.log("Connected");
 // create task HTML function
-let createTaskHTML = (name,description,assignedTo,dueDate,status) => {
+let createTaskHTML = (id, name,description,assignedTo,dueDate,status) => {
     // string using template literals
-   const html = `<li class="rainbow-box list-group-item" style= '  background-color: #f5ececab;  
+   let html = `<li data-task-id='${id}' class="rainbow-box list-group-item" style= 'background-color: #f5ececab;  
    border-radius: 26px;
    border: 0.6px solid black;'>
    <div class="d-flex w-100 mt-2 justify-content-between align-items-center">
@@ -61,7 +61,21 @@ class  TaskManager {
         this.tasks.push(task);
       //   console.log(task);
    }  
-    
+//  Task 7:  Get the task id to add number 
+    getTaskById(taskId) {
+        let foundTask;
+
+        // For Loop
+        for(let i=0; i< this.tasks.length; i++){
+            const task = this.tasks[i];
+            if(task.id === taskId){
+
+                foundTask = task;
+            }
+        }
+        return foundTask;
+        
+    }
 //    Step 2: render method() used to display task on the page
         render()  {
     //    create an array to store the tasks
@@ -76,7 +90,7 @@ class  TaskManager {
         // styling how the date will appear 
          const formattedDate = (newDate.getMonth() + 1) + "/" + newDate.getDate() + "/" + newDate.getFullYear(); 
          
-         const taskHtml = createTaskHTML(currentTask.name, currentTask.description, currentTask.assignedTo, formattedDate, currentTask.status);
+         const taskHtml = createTaskHTML(currentTask.id, currentTask.name, currentTask.description, currentTask.assignedTo, formattedDate, currentTask.status);
        
          //  push into the array
          tasksHtmlList.push(taskHtml);
@@ -99,8 +113,12 @@ class  TaskManager {
 
             
     } 
+    
+
 
    };
+
+
    
    const newTask = new TaskManager();
   
