@@ -223,10 +223,7 @@ body {
     }
  /*Add Task Page*/
  /* Task List */
- .badge-success{
-   border-radius: 20px;
-   padding: 5px;
- }
+/* Container the task will be in */
  .task-container {
   margin: 40px auto 0;
   border-radius:26px;
@@ -245,8 +242,26 @@ body {
   border-radius: 26px;
  }
 .table-header{
+  text-decoration: underline;
+  padding: 10px;
+  border-radius:26px;
+}
+/* Ending Task Container */
+
+/* Task Styling message */
+.badge-success{
+  border-radius: 20px;
   padding: 10px;
 }
+.delete-button{
+  margin-right:5px;
+  display:flex;
+  align-items: right;
+}
+/* .done-button{
+  margin-left:5px;
+} */
+
  /* Forms error message */
  .errormessage {
    color:red;
@@ -256,6 +271,7 @@ body {
  #alertError {
    display: none;
  }
+ /*  Ending error message */
  #addResetTaskbtn {
   padding: 10px;
   display:flex;

@@ -4,5 +4,8 @@
         "titleBar.activeBackground": "#5C3626",
         "titleBar.activeForeground": "#FCF9F8"
     },
-    "liveServer.settings.port": 5502
+    "liveServer.settings.port": 5502,
+    "cSpell.words": [
+        "addtask"
+    ]
 }

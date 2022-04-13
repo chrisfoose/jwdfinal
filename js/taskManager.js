@@ -1,25 +1,27 @@
 console.log("Connected");
+// Task 5: Step 1
 // create task HTML function
 let createTaskHTML = (id, name,description,assignedTo,dueDate,status) => {
     // string using template literals
-   let html = `<li data-task-id='${id}' class="rainbow-box list-group-item" style= 'background-color: #f5ececab;  
+   const html = `<li data-task-id='${id}' class="rainbow-box list-group-item" style= 'background-color: #f5ececab;  
    border-radius: 26px;
    border: 0.6px solid black;'>
    <div class="d-flex w-100 mt-2 justify-content-between align-items-center">
        <h5>${name}</h5>
-       <span class="badge-success">${status}</span>
+       <span class="badge-success ${status !== 'Completed' ?'badge-success' :'badge-danger'}">${status}</span>
    </div>
    <div class="d-flex w-100 mb-3 justify-content-between">
        <p>Assigned To: ${assignedTo}</p>
        <small>${dueDate}</small>
    </div>
    <p>${description}</p>
-   <button type="button" class="rainbow-box2 delete-button btn btn-danger">Delete this task</button>
-   <button type="button" class="done-button btn btn-success">Mark as done</button>
    
-</li><br>
-`;
+   <button type="button" class="delete-button btn btn-danger">Delete this task</button>
+   <button type="button" class="done-button btn btn-success ${status !== 'Completed' ?'visible':'invisible'}">Mark as done</button>
+  
+</li><br>`;
 
+// Table style similar to renu
 //    <tr id="taskTablData">
 //    <td data-label='Task Name'>${name}</td>
 //    <td data-label="Task Description"${description}</td>
@@ -34,7 +36,7 @@ let createTaskHTML = (id, name,description,assignedTo,dueDate,status) => {
 //      <p class="card-text"> ${description}</p>
 //      <a href="#" class="btn btn-primary">${dueDate}</a>
 //  </div>`;
-    console.log(html);
+    // console.log(html);
      return html;
 };
 
@@ -61,23 +63,9 @@ class  TaskManager {
         this.tasks.push(task);
       //   console.log(task);
    }  
-//  Task 7:  Get the task id to add number 
-    getTaskById(taskId) {
-        let foundTask;
-
-        // For Loop
-        for(let i=0; i< this.tasks.length; i++){
-            const task = this.tasks[i];
-            if(task.id === taskId){
-
-                foundTask = task;
-            }
-        }
-        return foundTask;
-        
-    }
-//    Step 2: render method() used to display task on the page
-        render()  {
+   //    Task 5: Step 2
+    // Display The Tasks Step 2: render method() used to display task on the page
+   render()  {
     //    create an array to store the tasks
             const tasksHtmlList = []; 
             const tasksHtmlVar = tasksHtmlList;
@@ -98,22 +86,31 @@ class  TaskManager {
          // console.log(tasksHtmlList);
             }
 
-        // Set the inner html of the tasksList on the page
-        //     for(let i = 0; i < tasksHtmlList.length; i++){
-        //          const tasksList = document.getElementById('taskTableRow');
-        //         tasksList.innerHTML =tasksHtmlList;
-        // }
          //  Create the tasksHtml by joining each item in the tasksHtmlList
     //     with a new line in between each item.
     //     seperate w. newline 
             const tasksHtml = tasksHtmlList.join('\n');
             const tasksList = document.querySelector('#taskList')
             // const tasksList = document.querySelector('#taskTableRow'); 
-            tasksList.innerHTML = tasksHtml;
-
-            
+            tasksList.innerHTML = tasksHtml;      
     } 
-    // save task to page
+    //  Task 7:  Get the task id to add number 
+    getTaskById(taskId) {
+        let foundTask;
+
+        // For Loop
+        for(let i=0; i< this.tasks.length; i++){
+            const task = this.tasks[i];
+            if(task.id === taskId){
+
+                foundTask = task;
+            }
+        }
+        return foundTask;
+        
+    }   
+    
+    // Task 8: save task to page
     save() {
        const tasksJson = JSON.stringify(this.tasks);
        localStorage.setItem('tasks', tasksJson);
@@ -124,7 +121,7 @@ class  TaskManager {
        // Store the currentId in localStorage
        localStorage.setItem('currentId', currentId);
     }
-    // load the save task 
+    // Task 8: load the save task 
     load(){
         if(localStorage.getItem('tasks')){
 
@@ -141,22 +138,24 @@ class  TaskManager {
         }
     }
 
-    // delete task method 
+   // delete task method 
     deleteTask(taskId) {
         const newTasks = [];
 
         for(let i = 0 ; i < this.tasks.length; i++){
             const task = this.tasks[i]; 
             
-            
-        if(task.id !== taskId){
-            newTasks.push(task);
+            if(task.id !== taskId){
+             newTasks.push(task);
+            }
         }
-        }
-
+        // set this.tasks to newTasks
         this.tasks = newTasks;
         
     }
+
+
+    
    
    };
 
