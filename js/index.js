@@ -1,8 +1,10 @@
 console.log("Connected!");
-// testing code: new instance of taskManager
-// use addtask method to add a new task to the manager
-// must return an empty arry in the brower
 
+// load the tasks from localStorage
+newTask.load();
+
+// render the tasks to the page
+newTask.render();
 
 // testing - Worked Well :)
 // let taskHtml = createTaskHTML("mike", "go outside","Self", "01/22/2020", "Upcoming" );
@@ -25,7 +27,7 @@ addTaskForm.addEventListener('submit', event => {
     console.log('working!')
     // prevent default method
     event.preventDefault();
-    newTask.render();
+    
        newTask.addtask();
      //     Let's write that validation code!
     // validate that the name is not empty
@@ -40,6 +42,7 @@ addTaskForm.addEventListener('submit', event => {
     if(name === ''|| description === '' ||dueDate === '' || assignedTo === ''||status === ''){
       errors.push("Please fill out all fields!");
       console.log(errors)
+      
     // if(description === '')
     //   errors.push("Task Description can't be blank");
     // if(dueDate === '')  
@@ -51,7 +54,7 @@ addTaskForm.addEventListener('submit', event => {
     //   
     } else{
         console.log('All fields filled!')
-        
+       
       };
     if(errors.length > 0){
       for(let i= 0; i < errors.length; i++){
@@ -77,7 +80,8 @@ addTaskForm.addEventListener('submit', event => {
           }
         }) .showToast();
     }   
-
+    newTask.save();
+    newTask.render();
     // clear form - reset it
     addTaskName.value = '';
     addTaskDescription.value = '';
@@ -150,11 +154,30 @@ tasksList.addEventListener('click', (event) => {
     task.status = 'Completed';
 
     newTask.render();
+    newTask.save();
   }
   console.log(tasksList);
+
+
+// Delete Task Button 
+
+if(event.target.classList.contains('done-button')){
+
+  const parentTask = event.target.parentElement;
+  console.log(parentTask);
+
+  const taskId = Number(parentTask.dataset.taskId);
+  console.log(taskId);
+
+  // Delete tasks
+  newTask.deleteTask(taskId);
+  // Save tasks
+  newTask.save();
+  // render tasks
+  newTask.render();
+
+}
 });
-
-
 
 
 
