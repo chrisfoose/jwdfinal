@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>ToDoozy</title>
+    <link rel="shortcut icon" type="image/jpg" href="https://cdn.jim-nielsen.com/macos/512/meistertask-task-management-2019-05-20.png"/>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+  </head>
+
+  <body>
+    <main>
+
+       <!-- Navbar-->
+   <nav class="navbar navbar-expand-lg navbar-light ">
+    <a href="welcome.html" class="navbar-brand" style="color:white" !important>ToDoozy</a>
+    <!-- Made it possible to click on the navbar icon & visibility see the icon -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navmenu">
+      <ul class="navbar-nav ml-auto" style="text-align:right" !important>
+        <li class="nav-item">
+          <a href="./index.html" class="nav-link" style="color:white" !important>Dashboard</a>
+        </li>
+        <li class="nav-item">
+         <a href="addtask.html" class="nav-link" style="color:white" !important>Add Task</a>
+       </li>
+      </ul>
+      </div>
+   </nav>
+           <!-- THIS CAN REPLACE INDEX.HTML IF WE CAN MAKE IT RESPONSIVE -->
+
+
+    
+      <!-- NEED HELP MAKING THIS RESPONSIVE -->
+      <div class="container">
+          <div class="taskbutton text-right">
+            <a class="btn addtask-button btn-light" href="/addtask.html" role="button">Add Task</a>
+          </div>
+          <div class="header">
+            <h1 class="dashboard-title display-3">My Tasks</h1>
+          </div>
+      </div>
+      <div class="container cardlass">
+        <div class="row rowheaders">
+          <!-- In Progress secton -->
+         <!-- To work must add div called card body within the col-sm div-->
+          <div class="col-sm">
+            <div class="categories">
+              <h2 class="card task-title grid-categories" style="width: 18rem;">In Progress</h2>
+           </div>
+           <div id ='inprogressTask'>
+           <div class="card col-sm border border-dark" style="width: 18rem; background-color:#f5ececab;">
+            <div class="card-body">
+              <h3 class="card-title">Task 1</h3>
+              <p class="card-text">Task  Description</p>
+              <a href="#" class="btn btn-primary">Due Date</a>
+          </div>
+            </div> 
+            <div class="card col-sm border border-dark" style="width: 18rem; background-color:#f5ececab;">
+              <div class="card-body">
+                <h3 class="card-title">Task 1</h3>
+                <p class="card-text">Task Description</p>
+                <a href="#" class="btn btn-primary">Due Date</a>
+            </div>
+            </div> 
+          </div>
+          </div> 
+          <!-- Upcoming Section -->
+         <!-- To work must add div called card body within the col-sm div -->
+            <div class="col-sm">
+              <div class="categories">
+                <h2 class="card task-title grid-categories" style="width: 18rem;">Upcoming</h2>
+             </div>
+             <div id="upcomingTask"> 
+               <div></div>
+             </div>
+              <div class="card col-sm border border-dark" style="width: 18rem; background-color:#f5ececab;">
+                <div class="card-body">
+                  <h3 class="card-title">Task 2</h3>
+                  <p class="card-text">Task  Description</p>
+                  <a href="#" class="btn btn-primary dueDatebtn">Due Date</a>
+              </div>
+                </div> 
+                <div class="card col-sm border border-dark" style="width: 18rem; background-color:#f5ececab;">                
+                  <div class="card-body">
+                      <h3 class="card-title">Task 2</h3>
+                      <p class="card-text">Task Description</p>
+                      <a href="#" class="btn btn-primary">Due Date</a>
+                  </div>
+              </div>
+            
+            </div>
+            <!-- Completed Section -->
+            <!-- To work must add div called card body within the col-sm div -->
+          <div class="col-sm">
+            <div class="categories">
+                <h2 class="card task-title grid-categories" style="width: 18rem;">Completed</h2>
+              </div>   
+              <div id="completedTask">
+              <div class="card col-sm border border-dark" style="width:18rem; background-color:#f5ececab;">           
+              <div class="card-body">
+                  <h3 class="card-title">Task 3</h3>
+                  <p class="card-text">Task Description</p>
+                  <a href="#" class="btn btn-primary">Due Date</a>
+              </div>
+              </div>
+            <div class="card col-sm border border-dark" style="width:18rem; background-color:#f5ececab;">           
+              <div class="card-body">
+                  <h2 class="card-title">Task 3</h2>
+                  <p class="card-text">Task Description</p>
+                  <a href="#" class="btn btn-primary">Due Date</a>
+              </div>
+              </div> 
+            </div>
+          </div>
+          </div>
+          <!-- <div id="tasklist">Task List</div> -->
+        </div>
+      </div>
+
+       <!-- alternative sample card using grid-->
+         <!-- <div class="categories">
+      <div class="grid-categories">
+        <h1 class="task-title">In Progress</h1>
+        
+      </div>
+
+      <div class="grid-categories">
+        <h1 class="task-title">Upcoming</h1>
+      </div>
+
+      <div class="grid-categories">
+        <h1 class="task-title">Completed</h1>
+      </div>
+    </div>
+    </div>
+  </div> 
+
+
+   
+
+ <div class="grid-container">
+    <div class="grid-item">
+    <h1 class="task-title">Task 1</h1>
+    <p class="task-text">Task Description</p>
+
+    </div>
+
+    <div class="grid-item">
+    <h1 class="task-title">Task 2</h1>
+    <p class="task-text">Task Description</p>
+  </div>
+
+    <div class="grid-item">
+      <h1 class="task-title">Task 3</h1>
+      <p class="task-text">Task Description</p>
+    </div>
+
+    <div class="grid-item">
+      <h1 class="task-title">Task 4</h1>
+      <p class="task-text">Task Description</p>
+    </div>
+
+    <div class="grid-item">
+      <h1 class="task-title">Task 5</h1>
+    <p class="task-text">Task Description</p>
+  </div>
+
+    <div class="grid-item">
+      <h1 class="task-title">Task 6</h1>
+      <p class="task-text">Task Description</p>
+    </div>
+  
+  
+  </div>  -->
+
+  <!-- Saving for example/ just remove the comment section to use <div class="grid1" style="--bs-columns: 4;">
+    <div>
+      First auto-column
+      <div class="grid1">
+        <div>Auto-column</div>
+      </div>
+    </div>
+    <div>
+      Second auto-column
+      <div class="grid1" 
+        <div>Auto-column</div>
+ 
+      </div>
+    </div>
+    <div>Third auto-column     
+      <div class="grid1" 
+       <div>Auto-column</div>
+  </div>
+  
+  </div> -->
+
+</main>
+
+<!--Moved the JavaScript Bootstrap to the bottom-it belongs there-->
+    <!-- Optional JavaScript-->
+    <script src="#"></script>
+    <script src="#"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+</body>
+
+</html>
